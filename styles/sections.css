@@ -114,6 +114,150 @@ nav {
   
 }
 
+.stars4, .stars5, .stars6 {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Duplicar os blocos de estrelas */
+.stars4::after,
+.stars5::after,
+.stars6::after {
+  content: "";
+  position: absolute;
+  top: 1000px; /* começa logo abaixo do bloco original */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: inherit; /* copia todas as estrelas da camada original */
+}
+
+/* Camadas individuais */
+.stars4 {
+  width: 1px;
+  height: 1px;
+  box-shadow: 
+    50px 100px white, 
+    200px 300px white, 
+    400px 50px white, 
+    600px 200px white, 
+    800px 150px white, 
+    1000px 400px white, 
+    1200px 250px white;
+  animation: animStars 50s linear infinite;
+}
+
+.stars5 {
+  width: 2px;
+  height: 2px;
+  box-shadow: 
+    150px 200px white, 
+    350px 400px white, 
+    550px 150px white, 
+    750px 300px white, 
+    950px 100px white, 
+    1150px 350px white;
+  animation: animStars 100s linear infinite;
+}
+
+.stars6 {
+  width: 3px;
+  height: 3px;
+  box-shadow: 
+    100px 50px white, 
+    300px 250px white, 
+    500px 100px white, 
+    700px 350px white, 
+    900px 200px white, 
+    1100px 400px white;
+  animation: animStars 150s linear infinite;
+}
+
+/* Camadas de estrelas */
+.stars, .stars2, .stars3 {
+  margin: 0 700px;
+  position: absolute;
+
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Duplicar os blocos de estrelas */
+.stars::after,
+.stars2::after,
+.stars3::after {
+  content: "";
+  position: absolute;
+  top: 1000px; /* começa logo abaixo do bloco original */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: inherit; /* copia todas as estrelas da camada original */
+}
+
+/* Camadas individuais */
+.stars {
+  width: 1px;
+  height: 1px;
+  box-shadow: 
+    50px 100px white, 
+    200px 300px white, 
+    400px 50px white, 
+    600px 200px white, 
+    800px 150px white, 
+    1000px 400px white, 
+    1200px 250px white;
+  animation: animStars 50s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: 
+    150px 200px white, 
+    350px 400px white, 
+    550px 150px white, 
+    750px 300px white, 
+    950px 100px white, 
+    1150px 350px white;
+  animation: animStars 100s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow: 
+    100px 50px white, 
+    300px 250px white, 
+    500px 100px white, 
+    700px 350px white, 
+    900px 200px white, 
+    1100px 400px white;
+  animation: animStars 150s linear infinite;
+}
+
+/* Animação contínua */
+@keyframes animStars {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+  from { background-position: 0 0; }
+  to { background-position: 0 -1000px; }
+}
+
 .hero .container {
   display: flex;
   align-items: center;
@@ -330,71 +474,3 @@ body {
   background: #0e0016;
 }
 
-/* ===========================
-   HERO - Fundo Estrelado
-=========================== */
-.hero {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 20px;
-  min-height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(to top, #0e0016 50%, #15002ede 100%);
-  text-align: center;
-  color: #fff;
-}
-
-/* Base das estrelas */
-.stars, .stars2, .stars3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  background: transparent;
-  animation: animStars linear infinite;
-  z-index: 0;
-}
-
-/* Camada 1 */
-.stars {
-  box-shadow: 
-    50px 100px white, 200px 300px white, 400px 50px white, 
-    600px 200px white, 800px 150px white, 1000px 400px white, 
-    1200px 250px white, 1400px 300px white, 1600px 180px white;
-  animation-duration: 50s;
-}
-
-/* Camada 2 */
-.stars2 {
-  box-shadow: 
-    150px 200px white, 350px 400px white, 550px 150px white, 
-    750px 300px white, 950px 100px white, 1150px 350px white, 
-    1350px 250px white, 1550px 380px white;
-  width: 2px;
-  height: 2px;
-  animation-duration: 100s;
-}
-
-/* Camada 3 */
-.stars3 {
-  box-shadow: 
-    100px 50px white, 300px 250px white, 500px 100px white, 
-    700px 350px white, 900px 200px white, 1100px 400px white, 
-    1300px 220px white, 1500px 330px white;
-  width: 3px;
-  height: 3px;
-  animation-duration: 150s;
-}
-
-/* Movimento infinito */
-@keyframes animStars {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100vh);
-  }
-}
