@@ -60,46 +60,70 @@ a {
 .header {
   height: 90px;
   background: linear-gradient(to top, #15002ede 50%, #0e0016 100%);
-  padding: 20px 0;
-  box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+  padding: 0 40px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Linha gradiente abaixo do header */
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #8519cc, #b354fc, transparent);
 }
 
 .header .container {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
-  
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.logo img {
-  display: flex;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
+/* Logo sempre na esquerda */
+.logo {
+  flex: 1;
+  text-align: left;
+}
+
+/* Menu centralizado ABSOLUTO */
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav ul {
-  text-align: center;
-  align-items: center;
   display: flex;
   list-style: none;
   gap: 24px;
-}
-nav {
-  display: flex;
+  align-items: center;
 }
 
 .nav a {
-  
   font-weight: 500;
   color: var(--text-color);
+  transition: color 0.3s;
 }
 
 .nav a:hover {
   color: var(--primary-color);
+}
+
+/* Botão sempre na direita */
+.header .btn-primary {
+  flex: 1;
+  text-align: right;
 }
 
 /* ==========================
