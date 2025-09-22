@@ -54,9 +54,6 @@ a {
   color: #fff;
 }
 
-/* ==========================
-   HEADER
-========================== */
 .header {
   height: 90px;
   background: linear-gradient(to top, #15002ede 50%, #0e0016 100%);
@@ -66,10 +63,9 @@ a {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-/* Linha gradiente abaixo do header */
+/* linha gradiente */
 .header::after {
   content: "";
   position: absolute;
@@ -84,30 +80,31 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
-/* Logo sempre na esquerda */
+/* logo sempre na esquerda */
 .logo {
   flex: 1;
   text-align: left;
 }
 
-/* Menu centralizado ABSOLUTO */
+/* menu centralizado */
 .nav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 2;
+  text-align: center;
 }
 
 .nav ul {
   display: flex;
-  list-style: none;
+  justify-content: center;
   gap: 24px;
-  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav a {
@@ -120,8 +117,8 @@ a {
   color: var(--primary-color);
 }
 
-/* Botão sempre na direita */
-.header .btn-primary {
+/* botão sempre na direita */
+.header-btn {
   flex: 1;
   text-align: right;
 }
@@ -130,106 +127,54 @@ a {
    HERO / BANNER
 ========================== */
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(to top, #0e0016 50%, #15002ede 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 0;
-  
 }
 
-.stars4, .stars5, .stars6 {
+.stars-geral {
   position: absolute;
-  margin: 0;
+  top: 0;
   left: 0;
-  background: transparent;
-  pointer-events: none;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Duplicar os blocos de estrelas */
+.stars, .stars2, .stars3,
+.stars4, .stars5, .stars6 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stars::after,
+.stars2::after,
+.stars3::after,
 .stars4::after,
 .stars5::after,
 .stars6::after {
   content: "";
   position: absolute;
-  top: 1000px; /* começa logo abaixo do bloco original */
+  top: 1000px;
   left: 0;
   width: 100%;
   height: 100%;
   background: transparent;
-  box-shadow: inherit; /* copia todas as estrelas da camada original */
+  box-shadow: inherit;
 }
 
-/* Camadas individuais */
-.stars4 {
-  width: 1px;
-  height: 1px;
-  box-shadow: 
-    50px 100px white, 
-    200px 300px white, 
-    400px 50px white, 
-    600px 200px white, 
-    800px 150px white, 
-    1000px 400px white, 
-    1200px 250px white;
-  animation: animStars 50s linear infinite;
-}
-
-.stars5 {
-  width: 2px;
-  height: 2px;
-  box-shadow: 
-    150px 200px white, 
-    350px 400px white, 
-    550px 150px white, 
-    750px 300px white, 
-    950px 100px white, 
-    1150px 350px white;
-  animation: animStars 100s linear infinite;
-}
-
-.stars6 {
-  width: 3px;
-  height: 3px;
-  box-shadow: 
-    100px 50px white, 
-    300px 250px white, 
-    500px 100px white, 
-    700px 350px white, 
-    900px 200px white, 
-    1100px 400px white;
-  animation: animStars 150s linear infinite;
-}
-
-/* Camadas de estrelas */
-.stars, .stars2, .stars3 {
-  margin: 0 700px;
-  position: absolute;
-
-  left: 0;
-  background: transparent;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-}
-
-/* Duplicar os blocos de estrelas */
-.stars::after,
-.stars2::after,
-.stars3::after {
-  content: "";
-  position: absolute;
-  top: 1000px; /* começa logo abaixo do bloco original */
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  box-shadow: inherit; /* copia todas as estrelas da camada original */
-}
-
-/* Camadas individuais */
 .stars {
   width: 1px;
   height: 1px;
@@ -270,7 +215,46 @@ a {
   animation: animStars 150s linear infinite;
 }
 
-/* Animação contínua */
+.stars4 {
+  width: 1px;
+  height: 1px;
+  box-shadow: 
+    60px 90px white, 
+    240px 280px white, 
+    380px 60px white, 
+    580px 210px white, 
+    810px 160px white, 
+    1010px 390px white, 
+    1190px 260px white;
+  animation: animStars 70s linear infinite;
+}
+
+.stars5 {
+  width: 2px;
+  height: 2px;
+  box-shadow: 
+    130px 210px white, 
+    330px 410px white, 
+    570px 160px white, 
+    730px 310px white, 
+    970px 110px white, 
+    1130px 360px white;
+  animation: animStars 120s linear infinite;
+}
+
+.stars6 {
+  width: 3px;
+  height: 3px;
+  box-shadow: 
+    110px 60px white, 
+    310px 260px white, 
+    510px 110px white, 
+    710px 360px white, 
+    910px 210px white, 
+    1110px 410px white;
+  animation: animStars 170s linear infinite;
+}
+
 @keyframes animStars {
   from {
     transform: translateY(0px);
@@ -278,8 +262,6 @@ a {
   to {
     transform: translateY(-1000px);
   }
-  from { background-position: 0 0; }
-  to { background-position: 0 -1000px; }
 }
 
 .hero .container {
@@ -288,6 +270,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  z-index: 1; /* conteúdo acima das estrelas */
 }
 
 .hero-text {
@@ -313,6 +296,16 @@ a {
 .hero-image img {
   max-width: 100%;
 }
+
+/* Responsividade para as estrelas ocuparem 100% na tela móvel */
+@media (max-width: 768px) {
+  .stars, .stars2, .stars3,
+  .stars4, .stars5, .stars6 {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 
 /* ==========================
    SOBRE
