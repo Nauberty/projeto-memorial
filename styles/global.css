@@ -17,6 +17,7 @@
 }
 
 body {
+  background: #0e0016;
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: #1d002b;
