@@ -55,7 +55,8 @@ a {
 }
 
 .header {
-  height: 70px;
+  width: 100%;
+  height: clamp(60px, 8vw, 90px); /* tamanho dinâmico */
   background: linear-gradient(to top, #15002ede 50%, #0e0016 100%);
   padding: 0 40px;
   position: relative;
@@ -63,6 +64,7 @@ a {
   z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* linha gradiente */
@@ -88,8 +90,18 @@ a {
 
 /* logo sempre na esquerda */
 .logo {
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
   flex: 1;
-  text-align: left;
+}
+
+.logo img {
+  
+  width: clamp(60px, 9vw, 90px); /* tamanho dinâmico */
+  height: auto; /* mantém a proporção */
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* menu centralizado */
