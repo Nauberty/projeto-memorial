@@ -98,7 +98,7 @@ a {
 
 .logo img {
   
-  width: clamp(60px, 9vw, 90px); 
+  width: clamp(180px, 9vw, 200px); 
   height: auto; 
   max-width: 100%;
   object-fit: contain;
