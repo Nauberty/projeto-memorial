@@ -98,13 +98,12 @@ a {
 
 .logo img {
   
-  width: clamp(60px, 9vw, 90px); /* tamanho dinâmico */
-  height: auto; /* mantém a proporção */
+  width: clamp(60px, 9vw, 90px); 
+  height: auto; 
   max-width: 100%;
   object-fit: contain;
 }
 
-/* menu centralizado */
 .nav {
   flex: 2;
   text-align: center;
