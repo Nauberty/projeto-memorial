@@ -2,7 +2,7 @@
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -83,7 +83,7 @@ a {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   position: relative;
 }
@@ -294,7 +294,22 @@ a {
   margin-bottom: 16px;
 }
 
+.gradient-text {
+ font-size: 2.rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6a00f4, #b5179e, #6a00f4);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 3s linear infinite;
+}
+@keyframes moveGradient {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
 .hero-text p {
+  color: #dfb9f8;
   margin-bottom: 24px;
   font-size: 1.1rem;
 }
