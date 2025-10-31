@@ -324,7 +324,7 @@ a {
 .sobre {
   padding: 80px 0;
   text-align: center;
-  background: linear-gradient(to top, #160031de 50%, #0e0016 100%);
+  background: linear-gradient(to top, #190035de 10%, #0e0016 100%);
 }
 
 .sobre h2 {
@@ -342,7 +342,7 @@ a {
    COMO FUNCIONA
 ========================== */
 .como-funciona {
-  background: linear-gradient(to top, #07000ff8 50%, #160031de 100%);
+  background: linear-gradient(to top, #1f023ade 40%, #190035de 70%);
   padding: 80px 0;
   text-align: center;
 }
@@ -384,7 +384,7 @@ a {
    PLANOS
 ========================== */
 .planos {
-  background-color: #07000ff8;
+  background: linear-gradient(to top, #100022de 50%, #1f023ade 100%);
   padding: 80px 0;
   text-align: center;
 }
@@ -429,7 +429,7 @@ a {
    CONTATO
 ========================== */
 .contato {
-  background: var(--section-bg);
+  background: linear-gradient(to top, #111 10%, #100022de 100%);
   padding: 80px 0;
   text-align: center;
 }
