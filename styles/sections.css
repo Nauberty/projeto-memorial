@@ -26,17 +26,20 @@ a {
    BOTÕES
 ========================== */
 .btn-primary {
-  background: var(--primary-color);
-  color: #ffffff;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  color: var(--text-color);
   padding: 12px 24px;
   border-radius: 6px;
   display: inline-block;
   font-weight: 600;
-  transition: var(--transition);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  transform: scale(1.03);
+  background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+  transition: transform 0.25s ease; /* nenhuma transição na cor */
 }
 
 .btn-secondary {
@@ -297,10 +300,10 @@ a {
 .gradient-text {
  font-size: 2.rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #6a00f4, #b5179e, #6a00f4);
-  background-size: 200%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200%;
   animation: moveGradient 3s linear infinite;
 }
 @keyframes moveGradient {
@@ -339,7 +342,7 @@ a {
 .sobre {
   padding: 80px 0;
   text-align: center;
-  background: linear-gradient(to top, #190035de 10%, #0e0016 100%);
+  background: linear-gradient(to top, #0e0016 10%, #0e0016 100%);
 }
 
 .sobre h2 {
@@ -352,12 +355,15 @@ a {
   margin: 0 auto;
   font-size: 1.1rem;
 }
+#color-book{
+  color: var(--primary-color);
+}
 
 /* ==========================
    COMO FUNCIONA
 ========================== */
 .como-funciona {
-  background: linear-gradient(to top, #1f023ade 40%, #190035de 70%);
+  background: linear-gradient(to top, #15002ede 40%, #0e0016 70%);
   padding: 80px 0;
   text-align: center;
 }
@@ -395,11 +401,61 @@ a {
   margin-bottom: 12px;
 }
 
+.arte-memorial-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* distância dos cards */
+}
+
+/* luz suave atrás */
+.arte-memorial-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1300px;  /* tamanho da luz */
+  height: 350px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(153, 0, 255, 0.781) 20%,
+    rgba(179, 48, 255, 0.336) 30%,
+    rgba(2, 0, 7, 0) 80%
+  );
+  filter: blur(80px);
+  z-index: 0;
+}
+
+/* caixa com imagem */
+.arte-memorial {
+  position: relative;
+  background-color: #111;
+  border-radius: 20px;
+  padding: 20px;
+  width: 1400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* acima da luz */
+  border: 2px solid var(--border-glow);
+box-shadow: 0 0 20px var(--shadow-glow);
+
+}
+
+.arte-memorial img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+
 /* ==========================
    PLANOS
 ========================== */
 .planos {
-  background: linear-gradient(to top, #100022de 50%, #1f023ade 100%);
+  background: linear-gradient(to top, #100022de 50%, #15002ede 100%);
   padding: 80px 0;
   text-align: center;
 }
@@ -439,6 +495,7 @@ a {
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 
 /* ==========================
    CONTATO
@@ -675,4 +732,9 @@ body {
   }
 }
 
+.logo-axiom {
+  display: flex;
+  align-items: center;
+  width: 25px;
+}
 

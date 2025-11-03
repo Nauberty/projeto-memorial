@@ -5,20 +5,34 @@
 }
 
 :root {
-  --primary-color: #8519cc;
-  --primary-hover: #b354fc;
-  --secondary-color: #ffffff;
-  --text-color: #ebebeb;
-  --text-light: #ebebeb;
-  --background-color: #fdfdfd;
-  --section-bg: #3a005c;
+  /* --- CORES PRINCIPAIS --- */
+  --primary-color: #8c52ff;            /* violeta principal */
+  --primary-hover: #9F77FF;            /* variação clara no hover */
+  --accent-color: #C55BFF;             /* magenta/lilás de destaque */
+
+  /* --- TEXTO --- */
+  --text-color: #FFFFFF;               /* texto principal */
+  --text-light: #D9C7FF;               /* texto secundário */
+
+  /* --- FUNDOS --- */
+  --background-color: #0E0016;         /* fundo base */
+  --background-gradient: linear-gradient(to top, #0E0016 50%, #15002E 100%);
+  --section-bg: #15002E;               /* seções intermediárias */
+
+  /* --- EFEITOS / BORDAS --- */
+  --border-glow: rgba(122, 44, 245, 0.6);
+  --shadow-glow: rgba(122, 44, 245, 0.3);
+
+  /* --- TRANSIÇÃO E FONTES --- */
   --font-family: 'Poppins', sans-serif;
+  --font-logo: "Hammersmith One", sans-serif 400;
   --transition: all 0.3s ease-in-out;
 }
 
+
 body {
-  background: #0e0016;
   font-family: var(--font-family);
+  background: var(--background-gradient);
   color: var(--text-color);
   background-color: #1d002b;
   line-height: 1.6;
