@@ -415,7 +415,7 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1300px;  /* tamanho da luz */
+  width: 2400px;  /* tamanho da luz */
   height: 350px;
   transform: translate(-50%, -50%);
   background: radial-gradient(
