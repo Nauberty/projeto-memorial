@@ -406,7 +406,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 2700px;      /* ✅ controla o espalhamento horizontal */
+  width: 2200px;      /* ✅ controla o espalhamento horizontal */
   /* max-width: 1600px; */
   height: 25rem;   /* ✅ controla o espalhamento vertical */
 
