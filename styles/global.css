@@ -28,12 +28,12 @@
   --font-logo: "Hammersmith One", sans-serif 400;
   --transition: all 0.3s ease-in-out;
 }
-
-
 body {
+  background: #0e0016;
   font-family: var(--font-family);
-  background: var(--background-gradient);
   color: var(--text-color);
-  background-color: #1d002b;
   line-height: 1.6;
+  margin: 0;
+  height: 100vh;
+  background: #0e0016;
 }
