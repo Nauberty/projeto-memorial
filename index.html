@@ -150,7 +150,7 @@
 <script>
 const starsContainer = document.querySelector('.sobre-stars');
 if (starsContainer) {
-  const numStars = 45; // quantidade de estrelas
+  const numStars = 35; // quantidade de estrelas
   for (let i = 0; i < numStars; i++) {
     const star = document.createElement('div');
     star.classList.add('star');
@@ -158,7 +158,7 @@ if (starsContainer) {
     const size = Math.random() * 1 + 1; // tamanho entre 1px e 3px
     const left = Math.random() * 100;   // posição horizontal
     const top = Math.random() * 100;    // posição vertical
-    const delay = Math.random() * 8;    // início aleatório da animação
+    const delay = Math.random() * 9;    // início aleatório da animação
 
     star.style.width = `${size}px`;
     star.style.height = `${size}px`;
