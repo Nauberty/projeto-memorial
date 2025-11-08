@@ -50,12 +50,23 @@
   </section>
   
   <!-- ================= SOBRE ================= -->
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <h2>Sobre o Lovy<span id="color-lovybook">Book</span></h2>
-      <p>O Lovybook é uma plataforma onde você pode criar, personalizar e compartilhar declarações de amor digitais de maneira fácil e criativa.</p>
+  <section id="sobre" class="sobre-nova">
+    <div class="circle-glow"></div>
+
+    <div class="sobre-content">
+        <h2>
+            Sobre o <span>LovyBook</span>
+        </h2>
+        <p>
+            O LovyBook é uma plataforma onde você pode criar, personalizar e compartilhar
+            declarações digitais de amor de maneira fácil e criativa.
+        </p>
     </div>
-  </section>
+
+    <!-- estrelas -->
+    <div class="sobre-stars"></div>
+</section>
+
   
   <section id="como-funciona" class="como-funciona">
     <div class="funciona-glow"></div> <!-- ✅ Glow atrás da caixa -->
@@ -136,6 +147,29 @@
 
 <script src="script.js"></script>
 
+<script>
+const starsContainer = document.querySelector('.sobre-stars');
+if (starsContainer) {
+  const numStars = 45; // quantidade de estrelas
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    const size = Math.random() * 1 + 1; // tamanho entre 1px e 3px
+    const left = Math.random() * 100;   // posição horizontal
+    const top = Math.random() * 100;    // posição vertical
+    const delay = Math.random() * 8;    // início aleatório da animação
+
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.left = `${left}%`;
+    star.style.top = `${top}%`;
+    star.style.animationDelay = `${delay}s`;
+
+    starsContainer.appendChild(star);
+  }
+}
+</script>
 
 
 </body>
